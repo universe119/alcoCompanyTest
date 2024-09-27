@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  padding: 14px 15vw 20px;
+  padding: 20px 15vw 20px;
   border-bottom: 1px solid #ddd;
   display: flex;
   flex-wrap: wrap;
@@ -40,5 +40,38 @@ header {
       opacity: 0.5;
     }
 
+  }
+
+  button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    display: none;
+
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  header {
+    padding: 16px 10vw;
+    
+    h1 {
+      font-size: 1.4rem;
+    }
+    nav {
+      display: none;
+    }
+    button {
+      display: block;
+    }
+  }  
+}
+
+@media screen and (max-width:$mobile) {
+  header {
+    h1 {
+      font-size: 1.2rem;
+    }
   }
 }
