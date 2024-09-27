@@ -1,0 +1,24 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: 0;
+}
+.hide {
+	position: absolute;
+	top: -999999px;
+	opacity: 0;
+}
+input,
+textarea {
+	outline: 0;
+}
