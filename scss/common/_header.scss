@@ -63,6 +63,63 @@ header {
   top: 0px;
   left: -260px;
 
+  //모바일 스타일 설정
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  h1 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 1.6rem/1 "orbitron";
+    color: #333;
+  }
+
+  ul {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+
+    li {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      flex-wrap: wrap;
+
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+
+      i {
+        text-align: center;
+        width: 100%;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+
+      }
+
+      span {
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+
   &.on {
     left: 0px;
     
