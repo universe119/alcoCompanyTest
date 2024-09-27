@@ -1,0 +1,44 @@
+header {
+  width: 100%;
+  padding: 14px 15vw 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    font: 600 1.6rem/1 "orbitron";
+    letter-spacing: 1px;
+    color: #222;
+    display: flex;
+    align-items: flex-end;
+
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    #gnb {
+      width: 100%;
+      display: flex;
+      gap: 60px;
+      justify-content: flex-end;
+      order: 2;
+      font: 500 0.8rem/1 "orbitron";
+      letter-spacing: 1px;
+      color: #333;
+      
+    }
+    .sns {
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      order: 1;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+
+  }
+}
