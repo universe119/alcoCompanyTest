@@ -53,7 +53,7 @@ header {
 }
 
 .mobilePanel {
-  width: 260px;
+  width: 320px;
   height: 100vh;
   position: fixed;
   background: rgba(255,255,255,0.5);
@@ -61,7 +61,7 @@ header {
   z-index: 5;
   transition: 0.5s;
   top: 0px;
-  left: -260px;
+  left: -340px;
 
   //모바일 스타일 설정
   display: flex;
@@ -69,21 +69,38 @@ header {
   align-content: space-between;
 
   h1 {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: 500 1.6rem/1 "orbitron";
-    color: #333;
-  }
+		width: 100%;
+		height: 50vh;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+
+		a {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			font: 500 2.8rem/1 "orbitron";
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		span {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			font: 500 0.8rem/1 "raleway";
+			color: #555;
+			letter-spacing: 1px;
+		}
+	}
 
   ul {
     width: 100%;
     height: 40vh;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid #ddd;
 
     li {
       width: 50%;
@@ -91,35 +108,35 @@ header {
       display: flex;
       flex-wrap: wrap;
 
-      border-bottom: 1px solid #ddd;
-      border-right: 1px solid #ddd;
+      border-top: 1px solid #fff;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
 
+			&:nth-of-type(even) {
+				border-right: none;
+			}
 
       a {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-      }
-
-      i {
-        text-align: center;
-        width: 100%;
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-
-      }
-
-      span {
-        text-align: center;
-        width: 100%;
-        font-size: 1rem;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: center;
+				color: #444;
+				i {
+					text-align: center;
+					width: 100%;
+        }
+        span {
+          text-align: center;
+          width: 100%;
+          font: 300 1rem/1 "raleway";
+        }
       }
     }
   }
-
   &.on {
     left: 0px;
     
@@ -128,7 +145,7 @@ header {
 
 @media screen and (max-width:$tablet) {
   header {
-    padding: 16px 10vw;
+    padding: 20px 10vw;
 
     h1 {
       font-size: 1.4rem;
