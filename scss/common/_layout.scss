@@ -34,3 +34,23 @@ main {
 
   }
 }
+
+@media screen and (max-width: $tablet) {
+  main {
+    padding: 8vh 10vw;
+
+    h2 {
+      font-size: 13vw;
+
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  main {
+    .breadcrumb {
+      justify-content: flex-start;
+      margin-top: 40px;
+    }
+  }
+}
