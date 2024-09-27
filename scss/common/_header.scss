@@ -52,10 +52,27 @@ header {
   }
 }
 
+.mobilePanel {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  z-index: 5;
+  transition: 0.5s;
+  top: 0px;
+  left: -260px;
+
+  &.on {
+    left: 0px;
+    
+  }
+}
+
 @media screen and (max-width:$tablet) {
   header {
     padding: 16px 10vw;
-    
+
     h1 {
       font-size: 1.4rem;
     }
