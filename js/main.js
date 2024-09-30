@@ -7,7 +7,16 @@ const secArr = document.querySelector("main").children;
 const scroll_btns = document.querySelectorAll(".scroller li");
 
 //init (get section position array)
-for (let sec of secArr) posArr.push(sec.offsetTop);
+//처음 로딩시 호출해서 초기 배열값 담아줌
+getPosArr(secArr);
+console.log(posArr);
+
+//get  position array whenever scrolls
+//브라우저 리사이즈 이벤트 발생할 때마다 새로운 값으로 갱신
+window.addEventListener("resize", () => {
+	getPosArr(secArr);
+	console.log(posArr);
+});
 
 //scroll btn event
 scroll_btns.forEach((btn, idx) => {
@@ -46,4 +55,14 @@ function activation(arrEl, index) {
 	/// HTML콜렉션으로 forEach가 안돼서 for of문으로 바꿈
 	for (const el of arrEl) el.classList.remove("on");
 	arrEl[index].classList.add("on");
+}
+
+//get box position array func
+function getPosArr(arrEl) {
+	// posArr 초기화 함
+	// 일단은 기존 posArr값을 비운뒤
+	// 새로운 새로 위치값을 배열에 담아줌
+	posArr = [];
+	// 위 초기화 변수를 넣지 않으면 push는 값을 계속 추가 한다.
+	for (let el of arrEl) posArr.push(el.offsetTop);
 }

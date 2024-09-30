@@ -52,7 +52,7 @@
 
         opacity: 0;
         transform: translateX(200px);
-        transition: 0.5s 0.5s;
+        transition: 0.5s 0.1s;
 			}
     }
 
@@ -78,7 +78,7 @@
 
         opacity: 0;
         transform: translateX(-200px);
-        transition: 0.5s 0.5s;
+        transition: 0.5s 0.1s;
   
         i {
           margin-right: 5px;
