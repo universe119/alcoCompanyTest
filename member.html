@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>member</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
   <script src="https://kit.fontawesome.com/0d9776e77a.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/anime.js"></script>
   <script type="module" src="js/common.js"></script>
+  <script type="module" src="js/main.js"></script>
 </head>
-<body>
+<body class="home">
   <header>
     <h1><a href="index.html" title="메인페이지 이동">ALPACO</a></h1>
 
@@ -38,18 +41,27 @@
   </header>
   
   <main>
-    <h2>MEMBERS</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quibusdam sint. Quos!
-    </p>
+    <figure id="visual">
+      <video src="img/vidBg.mp4" muted autoplay loop></video>
 
-    <ul class="breadcrumb">
-      <li><a href="index.html">HOME</a></li>
-      <li>/</li>
-      <li>MEMBERS</li>
-    </ul>
-
-    <section class="con" id="member">Main Page Contents</section>
+      <div class="slogan">
+        <article>
+          <h2>UI/UX DESIGN</h2>
+          <h2>FRONTEND DEV</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Labore sapiente ipsa sunt commodi aut, vitae expedita nostrum magnam dolore? Corporis
+          </p>
+        </article>
+        
+        <nav>
+          <button><i class="fa-solid fa-file"></i>ALPACO</button>
+        </nav>
+      </div>
+    </figure>
+    <section id="banner"></section>
+    <section id="news"></section>
+    <section id="info"></section>
   </main>
 
   <footer>
@@ -66,6 +78,14 @@
       <p>2024 ALPACO ALL RIGHTS RESERVED.</p>
     </article>
   </footer>
+
+  <!-- indicator -->
+  <ul class="scroller">
+    <li class="on"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
   
   <aside class="mobilePanel">
 

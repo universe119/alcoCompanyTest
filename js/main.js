@@ -24,25 +24,29 @@ scroll_btns.forEach((btn, idx) => {
 window.addEventListener("scroll", () => {
 	const scroll = window.scrollY;
 
-	// if (scroll >= posArr[0]) activation(scroll_btns, 0);
-	// if (scroll >= posArr[1]) activation(scroll_btns, 1);
-	// if (scroll >= posArr[2]) activation(scroll_btns, 2);
-	// if (scroll >= posArr[3]) activation(scroll_btns, 3);
-
 	// &&로 if대신 씀 조금 복잡한 코드(어려운코드)
 	// posArr.forEach((pos, idx) => scroll >= pos && activation(scroll_btns, idx));
 
-	// 조금 쉬운 코드
+	// 조금 쉬운 코드 위와 같음
 	posArr.forEach((pos, idx) => {
-		if (scroll >= pos) activation(scroll_btns, idx);
+		//어려운 코드
+		// if (scroll >= pos) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
+
+		// 쉬운코드 위와 같음
+		if (scroll >= pos) {
+			activation(scroll_btns, idx);
+			activation(secArr, idx);
+		}
 	});
 });
 
 //activation func
 function activation(arrEl, index) {
 	//btn activation
-	arrEl.forEach(el => el.classList.remove("on"));
+	// arrEl.forEach(el => el.classList.remove("on"));
+	/// HTML콜렉션으로 forEach가 안돼서 for of문으로 바꿈
+	for (const el of arrEl) el.classList.remove("on");
 	arrEl[index].classList.add("on");
 }
 
-//미션 - 스크롤시 버튼 활성화 로직 정리 / 스크롤이벤트 안쪽의 로직을 반복문 처리(1시 35분까지)
+// 미션 - 위의 로직에서 main요소 안쪽의 4개 #visual, #banner, #news, #info 영역도 스크롤 영역도달시 on클래스 붙여서 활성화 처리
