@@ -17,12 +17,49 @@
     color: #fff;
     text-align: center;
     margin-bottom: 100px;
-
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 0.5s 0s;
   }
   article {
-    width: 22%;
-    height: 300px;
+    width: 20%;
+    height: 250px;
     background-color: #fff;
+    opacity: 0;
+    transform: scale(2);
+    transition-duration: 0.5s;
+
+    &:nth-of-type(1){
+      transition-delay: 0.2s;
+    }
+    &:nth-of-type(2){
+      transition-delay: 0.3s;
+    }
+    &:nth-of-type(3){
+      transition-delay: 0.4s;
+    }
+    &:nth-of-type(4){
+      transition-delay: 0.5s;
+    }
 
   }
+
+
 }
+
+// 활성화 스타일 (activated style)
+#news.on {
+  h2 {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  article {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// 미션 (3시 40분)
+// 1- visual영역의 컨텐츠를 위와 같은 방법으로 취향에 맞게 모션 처리
+// 2- 지금과 같이 모션이 동작이 될때 아쉬운부분, 어색한부분 찾아보기
