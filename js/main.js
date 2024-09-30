@@ -11,7 +11,7 @@ for (let sec of secArr) posArr.push(sec.offsetTop);
 //scroll btn event
 scroll_btns.forEach((btn, idx) => {
 	btn.addEventListener("click", () => {
-		new Anime(window, { scroll: posArr[idx] }, { duration: 1000 });
+		new Anime(window, { scroll: posArr[idx] });
 
 		//btn activation
 		// scroll_btns.forEach(el => el.classList.remove("on"));
@@ -49,4 +49,7 @@ function activation(arrEl, index) {
 	arrEl[index].classList.add("on");
 }
 
-// 미션 - 위의 로직에서 main요소 안쪽의 4개 #visual, #banner, #news, #info 영역도 스크롤 영역도달시 on클래스 붙여서 활성화 처리
+//미션
+//1- 현재 스크롤 기능에서 발생하는 문제점 찾아보기
+//2- 문제점 찾았으면 해당 문제가 발생하는 원인 파악
+//3- 원인 파악이 되었다면 해결 방안 고민
