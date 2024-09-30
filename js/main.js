@@ -2,6 +2,7 @@ import Anime from "./anime.js";
 
 //variables
 let posArr = [];
+const base = -600;
 const secArr = document.querySelector("main").children;
 const scroll_btns = document.querySelectorAll(".scroller li");
 
@@ -28,7 +29,7 @@ window.addEventListener("scroll", () => {
 	// 조금 쉬운 코드 위와 같음
 	posArr.forEach((pos, idx) => {
 		//어려운 코드
-		if (window.scrollY >= pos) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
+		if (window.scrollY >= pos + base) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
 
 		// 쉬운코드 위와 같음
 		// if (window.scrollY >= pos) {
