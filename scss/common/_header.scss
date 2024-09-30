@@ -1,11 +1,12 @@
 header {
   width: 100%;
-  padding: 20px 15vw 20px;
+  padding: 20px 15vw;
   border-bottom: 1px solid #ddd;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
+  
   h1 {
     font: 600 1.6rem/1 "orbitron";
     letter-spacing: 1px;
@@ -52,6 +53,13 @@ header {
   }
 }
 
+//main header style
+.home > header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
 .mobilePanel {
   width: 320px;
   height: 100vh;

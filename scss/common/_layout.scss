@@ -35,6 +35,11 @@ main {
   }
 }
 
+//메인 페이지 전용 main style
+.home > main {
+  padding: 0px;
+
+}
 @media screen and (max-width: $tablet) {
   main {
     padding: 8vh 10vw;
