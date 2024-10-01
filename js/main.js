@@ -35,9 +35,18 @@ window.addEventListener("scroll", () => {
 	// posArr.forEach((pos, idx) => scroll >= pos && activation(scroll_btns, idx));
 
 	// 조금 쉬운 코드 위와 같음
-	posArr.forEach((pos, idx) => {
+	posArr.forEach((_, idx) => {
 		//어려운 코드
-		if (window.scrollY >= pos + base) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
+		//특정 영역사이일때만 해당 순번의 요소에만 on을 붙이고
+		if (window.scrollY >= posArr[idx] + base && window.scrollY < posArr[idx + 1] + base) {
+			scroll_btns[idx].classList.add("on");
+			secArr[idx].classList.add("on");
+		} else {
+			//해당 영역에서 벗어났을때는 해당 순번의 요소에만 on을 제거
+			scroll_btns[idx].classList.remove("on");
+			secArr[idx].classList.remove("on");
+		}
+		// if (window.scrollY >= pos + base) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
 
 		// 쉬운코드 위와 같음
 		// if (window.scrollY >= pos) {
